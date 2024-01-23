@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://sen.nbutidy.cn https://*.histats.com">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('./ai01.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+	  position: relative; /* 添加相对定位 */
+    }
+    .overlay {
+      position: absolute; /* 绝对定位 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.4); /* 0.4的不透明度白色遮罩 */
+      z-index: 1; /* 放在最底层 */
+    }
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      z-index: 2; /* 放在遮罩之上 */
+	  color: #C71585; /* 文字深粉红色 */
+    }
+    .button {
+	  font-size: 24px;
+      padding: 15px 30px;
+      border-radius: 20px;
+      background-color: #f2f2f2;
+      cursor: pointer;
+      z-index: 2; /* 放在遮罩之上 */
+	  color: #C71585; /* 文字深粉红色 */
+    }
+  </style>
+  <title>下载新版喽</title>
+</head>
+<body>
+  <div class="overlay"></div> <!-- 添加遮罩层 -->
+  <div class="title">色爱视频新版APP 2.0来袭</div>
+  <button class="button" onclick="downloadApp()">点此下载</button>
+</body>
+<script type="text/javascript" th:inline="javascript">
+    function downloadApp() {
+		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+		    const newWindow = window.open("./loading.html", "_blank");
+			newWindow.location.replace("https://sen.nbutidy.cn/cdn/app/apk/seaisp.mobileconfig");
+		} else {
+		    const newWindow = window.open("./loading.html", "_blank");
+			newWindow.location.replace("https://sen.nbutidy.cn/cdn/app/apk/starapp.apk");
+		}
+        return false;
+    }
+</script>
+</html>
